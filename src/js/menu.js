@@ -8,7 +8,8 @@ import dataMenu from "../data/menu.json"
 const template = menuTemplate(dataMenu);
 
 // 4. получить доступ к элементу, куда будем встраивать шаблон
-const menuEl = document.querySelector('.js-menu')
+import menuRefs from "./refs.js"
+const { menuEl } = menuRefs
 
 // 5. встраиваем полученный шаблон
 menuEl.insertAdjacentHTML('afterbegin', template)
